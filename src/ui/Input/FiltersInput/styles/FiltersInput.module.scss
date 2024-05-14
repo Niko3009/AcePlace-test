@@ -1,0 +1,72 @@
+@import '@/assets/all.scss';
+
+$color-2: #f4f5f51a;
+$color-3: #ffffff66;
+$color-4: #ffffff33;
+$color-5: $grey-color-1;
+$color-7: #F5F6F624;
+$color-8: $blue-color;
+$color-9: $white-color;
+
+.wrapper {
+    position: relative;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    @include transition(500ms);
+
+    input {
+        width: 100%;
+        height: 56px;
+        background-color: $color-2;
+        border: solid 0 transparent;
+        cursor: pointer;
+        caret-color: $color-9;
+        color: $color-9;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    label {
+        pointer-events: none;
+        color: $color-3;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    @include mouse-hover {
+        input {
+            background-color: $color-7;
+        }
+    }
+}
+
+.white {
+    border: 1px solid $grey-color;
+
+    input {
+        background-color: $white-color;
+        caret-color: $color-5;
+        color: $color-5;
+    }
+
+    label {
+        color: $blue-color;
+    }
+}
+
+
+
+@media #{$desktop} {
+    .wrapper {
+        input {
+            height: 64px;
+        }
+    }
+}

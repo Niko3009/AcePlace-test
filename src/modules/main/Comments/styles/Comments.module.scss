@@ -1,0 +1,60 @@
+@import '@/assets/all.scss';
+@import '@/app/layout.module.scss';
+
+.wrapper {
+    height: auto;
+    width: $module-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    color: $black-font-color;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1,
+    p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
+.comments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.comment-window {
+    width: 100%;
+    border-radius: 15px;
+    padding: 16px;
+    background-color: $white-color;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media #{$desktop} {
+    .wrapper {
+        width: 100%;
+    }
+
+    .comments {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}

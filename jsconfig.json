@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/main/*": ["./src/modules/main/*"],
+      "@/assets/*": ["./src/global/assets/*"],
+      "@/hooks/*": ["./src/global/hooks/*"],
+
+      "@/routes": ["./src/global/routes"],
+
+      "@/public/*": ["./public/*"]
+    }
+  }
+}

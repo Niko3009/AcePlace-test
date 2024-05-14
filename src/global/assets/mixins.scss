@@ -1,0 +1,54 @@
+@mixin font($font-size, $font-weight, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin scrollbar($width: 0, $height: 0) {
+
+    &,
+    * {
+        &::-webkit-scrollbar {
+            width: $width;
+            height: $height;
+        }
+
+        @if $width ==0 {
+            @-moz-document url-prefix() {
+                scrollbar-width: none;
+            }
+        }
+    }
+}
+
+@mixin transition($transition-time) {
+
+    &,
+    & * {
+        transition: all $transition-time;
+    }
+}
+
+@mixin disable-interaction {
+
+    &,
+    & * {
+        user-select: none;
+        touch-action: none;
+        pointer-events: none;
+    }
+}
+
+@mixin mouse-hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin moz-style {
+    @-moz-document url-prefix() {
+        @content;
+    }
+}

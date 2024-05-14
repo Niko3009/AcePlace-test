@@ -1,0 +1,40 @@
+@import '@/assets/all.scss';
+
+$overlay-color: #00000080;
+$hiding-duration-ms: 500;
+$hiding-duration: calc($hiding-duration-ms*1ms);
+
+:export {
+    hiding-duration-ms: $hiding-duration-ms;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
+    background-color: $overlay-color;
+    transition: all $hiding-duration;
+
+
+}
+
+.modal {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hidden {
+    @include disable-interaction;
+    visibility: hidden;
+    opacity: 0;
+}

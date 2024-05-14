@@ -1,0 +1,22 @@
+@import '@/assets/breakpoints.scss';
+
+$mobile-min-width: $mobile-start;
+$tablet-min-width: $tablet-start;
+$desktop-min-width: $desktop-start;
+
+// 
+
+$scrollbar-width: 6px;
+$scrollbar-height: 2px;
+
+// 
+
+$module-width: calc(100dvw);
+
+$header-container-max-width: $desktop-start;
+$header-container-width: min($module-width, $header-container-max-width);
+$header-padding: calc((100% - $header-container-width)/2);
+
+$main-container-max-width: 980px;
+$main-container-width: min($module-width, $main-container-max-width);
+$main-module-padding: calc((100% - $main-container-width)/2);

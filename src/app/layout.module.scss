@@ -1,0 +1,44 @@
+@import '@/assets/all.scss';
+
+.layout {
+    width: 100%;
+    min-height: 100dvh;
+    background-color: $black-color;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-style: normal;
+}
+
+.modules {
+    width: 100%;
+    height: 100%;
+}
+
+.module {
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+@media #{$desktop} {
+    .module {
+        padding: 0 $main-module-padding;
+    }
+
+    .header {
+        padding: 0 $header-padding;
+    }
+}

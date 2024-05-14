@@ -1,0 +1,99 @@
+@import '@/assets/all.scss';
+
+$hiding-duration-ms: 500;
+$hiding-duration: calc($hiding-duration-ms * 1ms);
+
+:export {
+    hiding-duration-ms: $hiding-duration-ms;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    @include scrollbar(0);
+
+    h1 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+
+    button {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 17px;
+    }
+}
+
+.window {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    max-height: 90%;
+    min-height: 10px;
+
+    padding: 0px;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    background-color: $white-color;
+    transition: all $hiding-duration;
+    transform: translateY(0);
+
+    &.hidden {
+        @include disable-interaction;
+        transform: translateY(100%);
+    }
+}
+
+.scrollWrapper {
+    height: auto;
+    width: 100%;
+    overflow: auto;
+}
+
+.content {
+    height: auto;
+    width: 100%;
+
+    padding: 0 24px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $blue-color;
+
+    overflow: hidden;
+}
+
+.tap {
+    width: 56px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $blue-color;
+    cursor: pointer;
+}
+
+@media #{$desktop} {
+    .wrapper {
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 34px;
+        }
+    }
+}

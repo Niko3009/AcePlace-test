@@ -1,0 +1,146 @@
+@import '@/assets/breakpoints.scss';
+@import '@/assets/parameters.scss';
+@import '@/assets/colors.scss';
+@import '@/assets/mixins.scss';
+
+@import '@/global/resetting.scss';
+@import '@/global/fonts.scss';
+
+* {
+
+  &,
+  &::before,
+  &::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  &::before,
+  &::after {
+    user-select: none;
+  }
+
+  &:root {
+    --mobile: $mobile;
+    --tablet: $tablet;
+    --desktop: $desktop;
+  }
+
+  &,
+  * {
+    &::-webkit-scrollbar {
+      width: $scrollbar-width;
+      height: $scrollbar-height
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $grey-color
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $white-color;
+    }
+
+    @-moz-document url-prefix() {
+      scrollbar-color: $white-color $grey-color;
+      scrollbar-width: thin;
+    }
+  }
+}
+
+html,
+body {
+  font-family: $fonts;
+  @include scrollbar($scrollbar-width, $scrollbar-height);
+}
+
+body {
+  position: relative;
+  width: 100%;
+  background-color: $black-color;
+  min-width: $min-width-device;
+  max-width: $max-width-device;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  line-height: normal;
+}
+
+div,
+section {
+  width: 100%;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+a {
+
+  &,
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+
+  display: block;
+  object-fit: cover;
+
+  &.img-cover {
+    object-fit: cover;
+  }
+
+  &.img-contain {
+    object-fit: contain;
+  }
+}
+
+h1,
+h2,
+p,
+span {
+  overflow: visible;
+  display: inline-block;
+  text-overflow: ellipsis;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+@media #{$desktop} {
+  h1 {
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 116px;
+  }
+}
