@@ -22,8 +22,12 @@ export default function Info({ apiData }) {
   return (
     <div className={styles.wrapper}>
       {info &&
-        info.map((companyInfo) => (
-          <CompanyInfo info={companyInfo} selectAddress={openModalOfAddress} />
+        info.map((companyInfo, index) => (
+          <CompanyInfo
+            info={companyInfo}
+            selectAddress={openModalOfAddress}
+            key={index + JSON.stringify(info)}
+          />
         ))}
       {isIDwasNotFound && <p>{'ИНН не найден'}</p>}
       {error && <p>{'Ошибка запроса'}</p>}
