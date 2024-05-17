@@ -12,11 +12,11 @@ export default async function Info({ taxId }) {
 }
 
 const getData = async (taxId) => {
-  const domain = process.env.API_DOMAIN
+  const domain = 'http://suggestions.dadata.ru' // process.env.API_DOMAIN
   const path = '/suggestions/api/4_1/rs/findById/party'
   const url = domain + path
 
-  const token = process.env.API_TOKEN
+  const token = '9b20cc11e67a8066ed9762aec69cbb81d7dfb0a2' // process.env.API_TOKEN
   const query = taxId
 
   const body = JSON.stringify({ query: query })
