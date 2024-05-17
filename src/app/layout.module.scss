@@ -4,13 +4,7 @@
     width: 100%;
     min-height: 100dvh;
     background-color: $black-color;
-    overflow-x: hidden;
-}
-
-.header {
-    width: 100%;
-    position: relative;
-    padding: 0;
+    // overflow-x: hidden;
 }
 
 .main {
@@ -29,16 +23,11 @@
 
 .module {
     width: 100%;
-    position: relative;
     padding: 0;
 }
 
 @media #{$desktop} {
     .module {
         padding: 0 $main-module-padding;
-    }
-
-    .header {
-        padding: 0 $header-padding;
     }
 }

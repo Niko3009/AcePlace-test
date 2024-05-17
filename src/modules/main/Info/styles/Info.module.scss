@@ -1,0 +1,56 @@
+@import '@/assets/all.scss';
+@import '@/app/layout.module.scss';
+
+.wrapper {
+    height: auto;
+    width: 100%;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: white;
+}
+
+.company-info {
+    height: auto;
+    width: 100%;
+    padding: 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+
+    overflow: hidden;
+}
+
+.modal-warning {
+    height: auto;
+    width: 100%;
+    padding: 20px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    overflow: hidden;
+
+    &-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+}
+
+.address {
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

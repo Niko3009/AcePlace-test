@@ -13,10 +13,6 @@ $scrollbar-height: 2px;
 
 $module-width: calc(100dvw);
 
-$header-container-max-width: $desktop-start;
-$header-container-width: min($module-width, $header-container-max-width);
-$header-padding: calc((100% - $header-container-width)/2);
-
-$main-container-max-width: 980px;
+$main-container-max-width: $desktop-min-width;
 $main-container-width: min($module-width, $main-container-max-width);
 $main-module-padding: calc((100% - $main-container-width)/2);

@@ -56,7 +56,6 @@ body {
 }
 
 body {
-  position: relative;
   width: 100%;
   background-color: $black-color;
   min-width: $min-width-device;
@@ -135,12 +134,4 @@ p {
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-}
-
-@media #{$desktop} {
-  h1 {
-    font-weight: 400;
-    font-size: 96px;
-    line-height: 116px;
-  }
 }

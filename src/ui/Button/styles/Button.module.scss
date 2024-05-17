@@ -1,7 +1,9 @@
 @import '@/assets/all.scss';
 
+$border-color-1: #2E37774D;
+
 .button {
-    height: 68px;
+    height: 56px;
     width: auto;
 
     padding: 0px 24px;
@@ -11,26 +13,57 @@
     justify-content: center;
     align-items: center;
 
-    font-weight: 400;
-    font-size: 36px;
+    font-size: 14px;
+    font-weight: 500;
     text-transform: uppercase;
     white-space: nowrap;
 
     overflow: hidden;
-    background-color: $black-color;
-    color: $white-color;
-    border-radius: 15px;
-
-
     @include transition(500ms);
-
-    @include mouse-hover {
-        filter: brightness(0.85);
-    }
 
     @media (hover: hover) {
         &:active {
-            transform: scale(0.9);
+            transform: scale(0.975);
         }
+    }
+
+    &.checkboxButton {
+        &:active {
+            transform: none;
+        }
+    }
+
+    &:disabled {
+        color: $white-color;
+        background-color: $grey-color;
+        pointer-events: none;
+    }
+}
+
+.white {
+    background-color: $grey-color;
+    border: 1px solid $grey-color;
+    color: $black-color;
+
+    filter: brightness(1.2);
+
+    @include mouse-hover {
+        filter: brightness(1.6);
+    }
+
+    &.hoverTransparencyStyle {
+        @include mouse-hover {
+            background-color: transparent;
+            color: $white-color;
+        }
+    }
+}
+
+
+
+@media #{$desktop} {
+    .button {
+        height: 64px;
+        padding: 0px 40px;
     }
 }

@@ -15,9 +15,9 @@ $hiding-duration: calc($hiding-duration-ms * 1ms);
     @include scrollbar(0);
 
     h1 {
-        font-size: 16px;
+        font-size: 24px;
         font-weight: 500;
-        line-height: 20px;
+        line-height: 32px;
     }
 
     p {
@@ -35,7 +35,7 @@ $hiding-duration: calc($hiding-duration-ms * 1ms);
 
 .window {
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     height: auto;
     width: 100%;
     max-height: 90%;
@@ -43,6 +43,8 @@ $hiding-duration: calc($hiding-duration-ms * 1ms);
 
     padding: 0px;
     padding-top: 16px;
+    padding-bottom: 20px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,7 +77,7 @@ $hiding-duration: calc($hiding-duration-ms * 1ms);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: $blue-color;
+    color: $black-color;
 
     overflow: hidden;
 }

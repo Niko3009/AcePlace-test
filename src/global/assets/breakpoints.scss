@@ -1,6 +1,6 @@
 $screen: "only screen";
 
-$min-width-device: 160px;
+$min-width-device: 320px;
 $max-width-device: 5920px;
 
 // 
@@ -14,24 +14,18 @@ $tablet-end: 1440px;
 $desktop-start: $tablet-end;
 $desktop-end: $max-width-device;
 
-$ultra-start: $desktop-end;
-$ultra-end: $max-width-device;
-
 // 
 
 $mobile: "#{$screen} and ( min-width: #{$mobile-start})";
-$mobile-only: "#{$screen} and ( min-width: #{$mobile-start}) and (max-width: #{$mobile-end})";
+$mobile-only: "#{$mobile} and (max-width: #{$mobile-end})";
 
 $tablet: "#{$screen} and (min-width: #{$tablet-start})";
-$tablet-only: "#{$screen} and (min-width: #{$tablet-start}) and (max-width: #{$tablet-end})";
 $non-tablet: "#{$screen} and (max-width: #{$tablet-start})";
+$tablet-only: "#{$tablet} and (max-width: #{$tablet-end})";
 
 $desktop: "#{$screen} and (min-width: #{$desktop-start})";
-$desktop-only: "#{$screen} and (min-width: #{$desktop-start}) and (max-width: #{$desktop-end})";
 $non-desktop: "#{$screen} and (max-width: #{$desktop-start})";
-
-$ultra: "#{$screen} and (min-width: #{$ultra-start})";
-$non-ultra: "#{$screen} and (max-width: #{$ultra-start})";
+$desktop-only: "#{$desktop} and (max-width: #{$desktop-end})";
 
 // 
 

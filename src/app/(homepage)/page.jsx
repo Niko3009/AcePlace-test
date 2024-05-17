@@ -1,13 +1,23 @@
-import Comments from '@/main/Comments'
-import Products from '@/main/Products'
+import SearchBar from '@/modules/main/SearchBar'
 
-import styles from '@/app/layout.module.scss'
+import styles from './page.module.scss'
 
 export default function () {
   return (
     <div className={styles.modules}>
-      <Comments />
-      <Products />
+      <SearchBar />
     </div>
   )
+}
+
+export async function generateMetadata(props, parent) {
+  const previousImages = (await parent).openGraph?.images || []
+  return {
+    title: `Поиск ИНН`,
+    description: `Поиск ИНН`,
+    openGraph: {
+      title: `Поиск ИНН`,
+      images: ['#', ...previousImages],
+    },
+  }
 }
