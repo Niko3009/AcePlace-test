@@ -12,16 +12,3 @@ export default async function ({ params }) {
     </div>
   )
 }
-
-export async function generateMetadata({ params }, parent) {
-  const { taxID } = params
-  const previousImages = (await parent).openGraph?.images || []
-  return {
-    title: `Информация об ИНН ${taxID}`,
-    description: `Информация об ИНН ${taxID}`,
-    openGraph: {
-      title: `Информация об ИНН ${taxID}`,
-      images: ['#', ...previousImages],
-    },
-  }
-}
