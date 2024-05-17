@@ -11,6 +11,8 @@ export default function Info({ apiData }) {
   const { info, error } = apiData
   const isIDwasNotFound = !info && !error
 
+  console.log(apiData)
+
   const [isModalOpen, setModalOpen] = useState()
   const [selectedAddress, setSelectedAddress] = useState(null)
 
